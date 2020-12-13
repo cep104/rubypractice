@@ -2,7 +2,7 @@ require 'pry'
 def movie_list(flight, movie_list)
         i = 0;
         j = 1;
-        while i <= movie_list.length do
+        while i <= movie_list.length && i != j do
             if movie_list[i].to_i + movie_list[j].to_i == flight
                 puts true
                 return true  
@@ -19,6 +19,6 @@ def movie_list(flight, movie_list)
 end
 
 flight = 160 
-movie_list = [60,80,20]
+movie_list = [80,80,20]
 
 movie_list(flight, movie_list)
